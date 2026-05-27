@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Manual do Usuário - NutriCare</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+    
+    @page {
+      size: A4;
+      margin: 2.5cm;
+    }
+    
+    .cover-page {
+      page-break-after: always;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 2cm;
+      padding-right: 2cm;
+      border-left: 12px solid #0f766e;
+      box-sizing: border-box;
+    }
+    
+    .cover-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 46px;
+      font-weight: 800;
+      color: #0f766e;
+      margin: 0;
+      line-height: 1.1;
+    }
+    
+    .cover-subtitle {
+      font-size: 22px;
+      color: #64748b;
+      margin-top: 15px;
+      margin-bottom: 80px;
+      font-weight: 400;
+    }
+    
+    .cover-meta {
+      font-size: 14px;
+      color: #64748b;
+      margin-top: auto;
+      line-height: 1.8;
+    }
+    
+    .cover-meta strong {
+      color: #1e293b;
+    }
+    
+    h1, h2, h3 {
+      font-family: 'Outfit', sans-serif;
+      color: #0f766e;
+      page-break-after: avoid;
+    }
+    
+    h1 {
+      font-size: 26px;
+      border-bottom: 2px solid #ccfbf1;
+      padding-bottom: 8px;
+      margin-top: 40px;
+    }
+    
+    h2 {
+      font-size: 18px;
+      margin-top: 30px;
+      border-left: 4px solid #0f766e;
+      padding-left: 8px;
+    }
+    
+    h3 {
+      font-size: 15px;
+      margin-top: 20px;
+      color: #0d9488;
+    }
+    
+    p, li {
+      font-size: 13.5px;
+      text-align: justify;
+    }
+    
+    ul, ol {
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+    
+    li {
+      margin-bottom: 8px;
+    }
+    
+    code {
+      font-family: Consolas, Monaco, 'Andale Mono', monospace;
+      background-color: #f1f5f9;
+      color: #0f766e;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12.5px;
+    }
+    
+    pre {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 15px;
+      overflow-x: auto;
+      margin-bottom: 20px;
+      page-break-inside: avoid;
+    }
+    
+    pre code {
+      background-color: transparent;
+      padding: 0;
+      color: #334155;
+      font-size: 11px;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+      font-size: 12.5px;
+      page-break-inside: avoid;
+    }
+    
+    th, td {
+      border: 1px solid #e2e8f0;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #f1f5f9;
+      color: #0f766e;
+      font-weight: 700;
+    }
+    
+    .page-break {
+      page-break-after: always;
+    }
+    
+    .alert-box {
+      background-color: #f0fdfa;
+      border-left: 4px solid #0d9488;
+      padding: 15px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 25px;
+      font-size: 13.5px;
+      page-break-inside: avoid;
+    }
+    
+    .alert-box strong {
+      color: #0f766e;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 20px;
+      page-break-inside: avoid;
+    }
+    
+    .feature-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    
+    .feature-item h4 {
+      margin: 0 0 8px 0;
+      color: #0f766e;
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    
+    .feature-item p {
+      margin: 0;
+      font-size: 12px;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Capa do Manual -->
+  <div class="cover-page">
+    <h1 class="cover-title">NutriCare</h1>
+    <div class="cover-subtitle">Manual do Usuário e Documentação Técnica do Sistema</div>
+    
+    <div class="cover-meta">
+      <strong>Desenvolvido por:</strong> Leandresson Pires Reis<br>
+      <strong>Versão do Aplicativo:</strong> 1.2 (Estável)<br>
+      <strong>Data de Publicação:</strong> Maio de 2026<br>
+      <strong>Licença:</strong> Todos os Direitos Reservados
+    </div>
+  </div>
+
+  <!-- Capítulo 1: Introdução -->
+  <div>
+    <h1>1. Introdução ao NutriCare</h1>
+    <p>
+      O <strong>NutriCare</strong> é um aplicativo web de página única (Single Page Application - SPA) de nível profissional, concebido especificamente para nutricionistas e profissionais de saúde realizarem o acompanhamento antropométrico e clínico de pacientes participantes de grupos de promoção da saúde.
+    </p>
+    <p>
+      O sistema adota uma abordagem <strong>offline-first</strong> (funciona completamente sem internet) e integra recursos de visualização gráfica avançada e sincronização em lote com o <strong>Google Sheets</strong>, viabilizando o armazenamento de dados online sem necessidade de servidores complexos ou bancos de dados caros.
+    </p>
+    
+    <div class="alert-box">
+      <strong>Vantagem Clínica:</strong> O NutriCare é rápido, responsivo e adaptado para tablets e smartphones, permitindo seu uso direto em consultórios, Unidades Básicas de Saúde (UBS) ou em atendimentos domiciliares.
+    </div>
+
+    <h2>1.1. Pilares do Projeto</h2>
+    <ul>
+      <li><strong>Privacidade do Paciente:</strong> Todos os dados inseridos são mantidos inicialmente no navegador local do usuário, garantindo conformidade com regras de proteção a dados sensíveis.</li>
+      <li><strong>Agilidade no Atendimento:</strong> O sistema possui recursos inteligentes como o autocompletar de nomes de pacientes já cadastrados para preenchimento automático das informações fixas (telefone, idade, altura, grupo e comorbidades).</li>
+      <li><strong>Indicadores Baseados em Evidências:</strong> Os cálculos de Classificação de IMC e Relação Cintura-Quadril seguem as diretrizes recomendadas pela Organização Mundial da Saúde (OMS) e Lipschitz.</li>
+    </ul>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- Capítulo 2: Funcionalidades Clínicas -->
+  <div>
+    <h1>2. Funcionalidades do Aplicativo</h1>
+    <p>
+      O NutriCare unifica o registro de dados antropométricos e clínicos em um fluxo único de avaliação física. Cada pesagem gera um histórico cronológico organizado para o profissional de saúde.
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-item">
+        <h4>Cadastro de Dados Pessoais</h4>
+        <p>Registro de Nome Completo, Telefone de Contato (WhatsApp integrado), Idade (anos), Sexo Biológico (Mulher / Homem) e Grupo/UBS de atendimento.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Avaliação Antropométrica</h4>
+        <p>Registro dinâmico de Peso (kg), Altura (cm), Circunferência da Cintura (cm) e Circunferência do Quadril (cm).</p>
+      </div>
+      <div class="feature-item">
+        <h4>Acompanhamento Clínico</h4>
+        <p>Anotação sistemática de Pressão Arterial (P.A. no formato de texto como 120/80) e Glicemia Capilar (mg/dL) a cada pesagem.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Histórico e Linha do Tempo</h4>
+        <p>Agrupamento inteligente por paciente. Ao expandir o card de um paciente, exibe-se uma tabela com toda a evolução cronológica.</p>
+      </div>
+    </div>
+
+    <h2>2.1. Métricas de Saúde Calculadas automaticamente</h2>
+    
+    <h3>Índice de Massa Corporal (IMC)</h3>
+    <p>
+      Calculado pela equação: <code>IMC = Peso (kg) / Altura² (m)</code>. O NutriCare incorpora uma <strong>ferramenta de cálculo inteligente de IMC</strong> que detecta a idade informada do paciente e seleciona automaticamente a diretriz de classificação recomendada:
+    </p>
+    <ul>
+      <li><strong>Adultos (menores de 60 anos):</strong> Classificação baseada nos critérios padrão da <strong>OMS (Organização Mundial da Saúde)</strong>.</li>
+      <li><strong>Idosos (60 anos ou mais):</strong> Classificação baseada no critério de <strong>Lipschitz (1994) / OPAS</strong>, que tolera faixas de IMC ligeiramente superiores para compensar as alterações corporais normais da senescência (perda de massa magra e estatura).</li>
+    </ul>
+    <p>
+      Essa decisão é executada de forma autônoma em tempo real no formulário (exibindo a referência no card de prévia) e é salva na base de dados e sincronizada na planilha online sem necessidade de intervenção do profissional de saúde.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Classificação Adulto (OMS - Idade &lt; 60)</th>
+          <th>Classificação Idoso (Lipschitz - Idade &ge; 60)</th>
+          <th>Faixa de IMC</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Baixo Peso</td>
+          <td>Baixo Peso (Idoso)</td>
+          <td>&lt; 18.5 (Adulto) / &lt; 22.0 (Idoso)</td>
+        </tr>
+        <tr>
+          <td>Eutrofia (Normal)</td>
+          <td>Eutrofia (Idoso)</td>
+          <td>18.5 - 24.9 (Adulto) / 22.0 - 27.0 (Idoso)</td>
+        </tr>
+        <tr>
+          <td>Sobrepeso</td>
+          <td>Sobrepeso (Idoso)</td>
+          <td>25.0 - 29.9 (Adulto) / &gt; 27.0 (Idoso)</td>
+        </tr>
+        <tr>
+          <td>Obesidade Grau I / II / III</td>
+          <td>Sobrepeso (Idoso)</td>
+          <td>&ge; 30.0 (Adulto)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Relação Cintura-Quadril (RCQ)</h3>
+    <p>
+      Calculado pela fórmula: <code>RCQ = Cintura (cm) / Quadril (cm)</code>. É o indicador padrão-ouro para estimar o risco de complicações cardiovasculares associadas ao acúmulo de gordura visceral. A classificação de risco varia de acordo com o Sexo do paciente:
+    </p>
+    <ul>
+      <li><strong>Mulher (Feminino):</strong> RCQ &ge; <strong>0.85</strong> é classificado como <strong>Risco Cardíaco Elevado</strong>.</li>
+      <li><strong>Homem (Masculino):</strong> RCQ &ge; <strong>0.90</strong> é classificado como <strong>Risco Cardíaco Elevado</strong>.</li>
+    </ul>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- Capítulo 3: Gráficos de Evolução -->
+  <div>
+    <h1>3. Gráficos Clínicos Evolutivos</h1>
+    <p>
+      Para aperfeiçoar a experiência clínica do profissional de nutrição e auxiliar no engajamento dos pacientes, o NutriCare integra gráficos dinâmicos alimentados pela biblioteca <strong>Chart.js</strong>.
+    </p>
+    <p>
+      O gráfico de evolução aparece no topo dos detalhes expandidos do paciente, dividindo-se em três abas de dados históricos ordenados cronologicamente:
+    </p>
+    
+    <h2>3.1. Abas do Gráfico de Evolução</h2>
+    <ol>
+      <li><strong>Aba Peso (kg):</strong> Exibe a evolução ponderal do paciente através de uma linha com preenchimento sombreado na cor institucional (Teal/Menta). Facilita a identificação visual de perda ou ganho de peso.</li>
+      <li><strong>Aba Glicemia Capilar (mg/dL):</strong> Plota a linha de tendência glicêmica do paciente. Registros em que a glicemia não foi anotada são desconsiderados de forma automática no gráfico para evitar quebras visuais (valores nulos).</li>
+      <li><strong>Aba Pressão Arterial (mmHg):</strong> Plota duas linhas independentes no mesmo gráfico: a linha vermelha superior representa a pressão <strong>Sistólica (Máxima)</strong> e a linha azul inferior representa a pressão <strong>Diastólica (Mínima)</strong>. O gráfico interpreta strings como "130/80" ou "120/70" e plota seus respectivos componentes numéricos.</li>
+    </ol>
+
+    <div class="alert-box">
+      <strong>Estética Premium Adaptativa:</strong> Os gráficos se adaptam automaticamente ao tema ativo do aplicativo. No Tema Escuro, as grades e textos do gráfico mudam para cores claras com transparência, garantindo legibilidade e uma aparência sofisticada.
+    </div>
+  </div>
+
+  <!-- Capítulo 4: Armazenamento e Backups -->
+  <div>
+    <h1>4. Armazenamento e Segurança dos Dados</h1>
+    <p>
+      O NutriCare foi projetado sob a filosofia <strong>offline-first</strong>. Toda a aplicação opera localmente e de forma autossegura:
+    </p>
+    
+    <h2>4.1. Banco de Dados Local (LocalStorage)</h2>
+    <p>
+      As pesagens e cadastros efetuados são gravados diretamente no banco de dados local do navegador (<code>localStorage</code>) sob a chave <code>ubs_patients</code>. As configurações de integração residem em <code>ubs_settings</code>. Isso garante que:
+    </p>
+    <ul>
+      <li>O aplicativo carrega instantaneamente, mesmo sem conexão de internet.</li>
+      <li>Dados sensíveis de saúde permanecem exclusivamente no computador ou celular que operou o app.</li>
+    </ul>
+
+    <h2>4.2. Exportação Offline e Backups</h2>
+    <p>
+      Para mitigar o risco de perda de dados caso o navegador seja limpo, o aplicativo fornece duas ferramentas de exportação de dados localizadas no botão <strong>Backup / CSV</strong>:
+    </p>
+    <ul>
+      <li><strong>Planilha CSV Local:</strong> Gera um arquivo <code>.csv</code> formatado no padrão do Excel em português (separador por ponto-e-vírgula <code>;</code>, codificação UTF-8 BOM e vírgulas decimais).</li>
+      <li><strong>Backup JSON:</strong> Faz o download de todo o banco de dados local em formato <code>.json</code>. Este arquivo pode ser importado em outro computador ou navegador usando o botão correspondente para mesclar os históricos de pacientes de maneira simples.</li>
+    </ul>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- Capítulo 5: Integração Google Sheets -->
+  <div>
+    <h1>5. Integração com o Google Sheets</h1>
+    <p>
+      A sincronização na nuvem com o Google Sheets é implementada via chamadas HTTP (POST) para um <strong>Google Web App</strong> construído em <strong>Google Apps Script</strong>.
+    </p>
+
+    <h2>5.1. A Estrutura de Envio</h2>
+    <p>
+      Quando o usuário clica em sincronizar (individualmente ou em lote), o aplicativo envia um objeto contendo os 18 dados clínicos. A comunicação é desenhada de forma robusta e otimizada para navegadores locais:
+    </p>
+    
+    <div class="alert-box">
+      <strong>Contorno de CORS (no-cors):</strong> Navegadores bloqueiam requisições de rede originadas de arquivos locais (protocolo <code>file://</code>). O NutriCare detecta de forma automática se está rodando localmente no computador do usuário e ativa o modo <code>no-cors</code>, permitindo que os dados cheguem com sucesso ao Google Sheets mesmo sob execução offline local!
+    </div>
+
+    <h2>5.2. O Código do Apps Script</h2>
+    <p>
+      O script a ser inserido nas Extensões da sua Planilha Google verifica automaticamente se a tabela está vazia. Caso esteja, ele cria uma linha de cabeçalho estilizada em verde-escuro e ajusta as colunas automaticamente.
+    </p>
+    <p>
+      Abaixo está a listagem de colunas enviadas pelo sistema para a planilha online:
+    </p>
+    <ol>
+      <li><strong>Data do Registro:</strong> Data e hora da sincronização.</li>
+      <li><strong>Nome Completo:</strong> Identificador do paciente.</li>
+      <li><strong>Telefone:</strong> Contato do WhatsApp.</li>
+      <li><strong>Sexo:</strong> "M" ou "F".</li>
+      <li><strong>Idade (anos):</strong> Idade registrada na avaliação.</li>
+      <li><strong>Grupo / UBS:</strong> Nome do grupo do paciente.</li>
+      <li><strong>Peso (kg):</strong> Peso corporal aferido.</li>
+      <li><strong>Data do Peso:</strong> Data informada no formulário.</li>
+      <li><strong>Altura (m):</strong> Altura em metros.</li>
+      <li><strong>IMC (kg/m²):</strong> Índice de Massa Corporal.</li>
+      <li><strong>Classificação IMC:</strong> Status do IMC (ex: Eutrofia).</li>
+      <li><strong>Cintura (cm):</strong> Circunferência da cintura.</li>
+      <li><strong>Quadril (cm):</strong> Circunferência do quadril.</li>
+      <li><strong>Relação Cintura/Quadril (RCQ):</strong> Valor do RCQ.</li>
+      <li><strong>Classificação RCQ:</strong> Status do risco cardíaco (Risco / Normal).</li>
+      <li><strong>Pressão Arterial:</strong> Registro hemodinâmico.</li>
+      <li><strong>Glicemia Capilar (mg/dL):</strong> Nível glicêmico.</li>
+      <li><strong>Comorbidades:</strong> Lista de doenças declaradas separadas por vírgula.</li>
+    </ol>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- Capítulo 6: Arquitetura, Tecnologias e Fluxograma -->
+  <div>
+    <h1>6. Arquitetura, Tecnologias e Fluxograma</h1>
+    <p>
+      O NutriCare foi desenvolvido para ser independente e auto-executável, não necessitando de processos de compilação complexos ou banco de dados relacional hospedado.
+    </p>
+
+    <h2>6.1. Linguagens e Tecnologias Utilizadas</h2>
+    <ul>
+      <li><strong>HTML5 Semântico:</strong> Utilizado para estruturar a página e os componentes de formulários de forma acessível e estruturada.</li>
+      <li><strong>CSS3 Vanilla:</strong> Folha de estilos customizada utilizando variáveis CSS (design system), layouts responsivos (Flexbox e CSS Grid), animações de transição e suporte completo para temas Claro e Escuro.</li>
+      <li><strong>JavaScript (ES6+):</strong> Linguagem principal responsável por toda a lógica de negócios, incluindo validação, persistência no <code>localStorage</code>, manipulação do DOM e integrações assíncronas de rede.</li>
+      <li><strong>Chart.js:</strong> Biblioteca leve e de alto desempenho para renderização de gráficos em telas utilizando elemento HTML Canvas.</li>
+      <li><strong>Google Apps Script (JavaScript no lado do Servidor):</strong> API para recepção e gravação em tempo real na planilha Google Sheets.</li>
+    </ul>
+
+    <h2>6.2. Métodos de Integração e Armazenamento</h2>
+    <p>
+      A arquitetura do aplicativo baseia-se em armazenamento local reativo (<code>localStorage</code>) e transporte através de requisições <code>Fetch</code> assíncronas em modo <code>no-cors</code> para permitir a execução off-line direta de arquivos <code>file://</code> locais sem bloqueios de segurança do navegador.
+    </p>
+
+    <h2>6.3. Fluxograma de Funcionamento</h2>
+    <div class="flowchart-container" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin-top: 15px;">
+      <div class="flow-step" style="background: #f0fdfa; border: 1.5px solid #0f766e; border-radius: 6px; padding: 10px; text-align: center; font-weight: 700; margin-bottom: 15px; font-size: 13px; color: #0f766e;">
+        1. ENTRADA DE DADOS: Profissional digita o Nome do paciente no formulário.
+      </div>
+      <div style="text-align: center; margin-bottom: 15px; color: #0d9488; font-weight: bold;">↓</div>
+      <div class="flow-step" style="background: #f0fdfa; border: 1.5px solid #0f766e; border-radius: 6px; padding: 10px; text-align: center; font-weight: 700; margin-bottom: 15px; font-size: 13px; color: #0f766e;">
+        2. VERIFICAÇÃO AUTOMÁTICA: O sistema autocompleta Idade, Sexo, Altura e Comorbidades se o paciente já existir.
+      </div>
+      <div style="text-align: center; margin-bottom: 15px; color: #0d9488; font-weight: bold;">↓</div>
+      <div class="flow-step" style="background: #f0fdfa; border: 1.5px solid #0f766e; border-radius: 6px; padding: 10px; text-align: center; font-weight: 700; margin-bottom: 15px; font-size: 13px; color: #0f766e;">
+        3. PROCESSAMENTO CLÍNICO: O app calcula o IMC (OMS/Lipschitz) e a Relação Cintura-Quadril (RCQ) ajustada por sexo.
+      </div>
+      <div style="text-align: center; margin-bottom: 15px; color: #0d9488; font-weight: bold;">↓</div>
+      <div class="flow-step" style="background: #f0fdfa; border: 1.5px solid #0f766e; border-radius: 6px; padding: 10px; text-align: center; font-weight: 700; margin-bottom: 15px; font-size: 13px; color: #0f766e;">
+        4. GRAVAÇÃO LOCAL (localStorage): Os dados são gravados localmente. Gráficos de Peso, Glicemia e P.A. são recarregados.
+      </div>
+      <div style="text-align: center; margin-bottom: 15px; color: #0d9488; font-weight: bold;">↓</div>
+      <div style="display: flex; justify-content: space-around; gap: 20px;">
+        <div style="flex: 1; background: #e0f2fe; border: 1.5px solid #0284c7; border-radius: 6px; padding: 10px; text-align: center; font-weight: 700; font-size: 12px; color: #0369a1;">
+          5A. SINCRONIZAÇÃO NUVEM<br>Envio de POST (JSON) para Google Sheets via Apps Script
+        </div>
+        <div style="flex: 1; background: #fef3c7; border: 1.5px solid #d97706; border-radius: 6px; padding: 10px; text-align: center; font-weight: 700; font-size: 12px; color: #b45309;">
+          5B. EXPORTAÇÃO OFFLINE<br>Download manual de planilha local em formato CSV ou Backup JSON
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "ubs-nutricare",
+  "version": "1.0.0",
+  "description": "Aplicativo de Acompanhamento Nutricional para Grupos de UBS",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server ./ -p 3000 -o"
+  },
+  "keywords": [
+    "nutricao",
+    "ubs",
+    "imc",
+    "antropometria"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}
